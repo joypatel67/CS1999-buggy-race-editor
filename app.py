@@ -95,6 +95,11 @@ def summary():
     return jsonify({key: val for key, val in buggies if (val != "" and val is not None)})
 
 
+@app.route('/info')
+def info():
+    return render_template('info.html')
+
+
 # You shouldn't need to add anything below this!
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
